@@ -10,6 +10,7 @@
 
 <style>
 
+/* RESET */
 *{
     margin:0;
     padding:0;
@@ -101,11 +102,39 @@ section{
 }
 
 /* ================= ABOUT ================= */
+.about-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
 .about-container{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
     line-height:1.8;
+}
+
+.image-wrapper{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.image-wrapper img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    display:block;
+}
+
+.quote-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(15,81,51,0.75);
+    color:white;
+    padding:20px;
+    backdrop-filter:blur(6px);
 }
 
 /* ================= SERVICES ================= */
@@ -133,6 +162,14 @@ section{
     padding:25px;
     border-radius:12px;
     box-shadow:0 0 20px rgba(0,0,0,.08);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
 .service-link{
@@ -172,7 +209,6 @@ section{
     justify-content:center;
     border-radius:50%;
     color:white;
-    text-decoration:none;
 }
 
 .ig{ background:#E1306C; }
@@ -203,7 +239,6 @@ section{
     border:none;
     font-weight:bold;
     border-radius:8px;
-    cursor:pointer;
 }
 
 /* FOOTER */
@@ -216,8 +251,13 @@ footer{
 
 /* MOBILE */
 @media(max-width:900px){
+    .about-wrapper,
     .contact-grid{
         grid-template-columns:1fr;
+    }
+
+    .image-wrapper img{
+        height:260px;
     }
 }
 
@@ -258,23 +298,71 @@ footer{
 
 </section>
 
-<!-- ABOUT (optional placeholder kept minimal) -->
+<!-- ABOUT -->
 <section id="about">
 
 <h2 class="section-title">About Novera</h2>
 
+<div class="about-wrapper">
+
 <div class="about-container">
 
+<h3>Professional installers, trained and certified.</h3>
+
 <p>
-Novera Energy & Technologies Ltd is a Ghanaian security and access systems installer
-specializing in CCTV, intercoms, access control, automatic gates, and electric fencing.
+Novera Energy & Technologies Ltd is a Ghanaian security and access systems installer.
+We design, install, and maintain CCTV, video intercom, access control, automatic gates, and electric fencing
+for homes and businesses across the country.
 </p>
+
+<p>
+Our team is <strong>Hikvision Certified Security Associates</strong> — formally trained and accredited
+to install Hikvision surveillance equipment according to manufacturer standards.
+Every project is executed with discipline, precision, neatness, and attention to detail.
+</p>
+
+<p>
+<strong>Note:</strong> Novera is a professional installation company.
+We are not a distributor or reseller of Hikvision or Centurion Systems products.
+</p>
+
+<!-- BADGE STYLE INFO LINE -->
+<div style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+
+<span style="padding:6px 12px; background:#0F5132; color:white; border-radius:20px; font-size:12px;">
+Hikvision Certified Security Associate
+</span>
+
+<span style="padding:6px 12px; background:#0072ff; color:white; border-radius:20px; font-size:12px;">
+Ghana • Professional Installers
+</span>
+
+<span style="padding:6px 12px; background:#111; color:white; border-radius:20px; font-size:12px;">
+Est. 2026 • A New Standard
+</span>
+
+</div>
+</div>
+
+<div class="image-wrapper">
+
+<img src="assets/control-panel-Pie5Yi4r.png" alt="Installation Team">
+
+<div class="quote-overlay">
+<p style="margin-top:20px; font-style:italic;">
+“We built Novera to bring world-class home intelligence, solar, and security to Ghana — engineered for our climate, our homes, our people.”
+</p>
+
+<p><strong>— The Novera Team</strong></p>
+
+</div>
+
 
 </div>
 
 </section>
 
-<!-- SERVICES (NOW UPDATED) -->
+<!-- SERVICES -->
 <section id="services">
 
 <h2 class="section-title">Our Services</h2>
@@ -284,8 +372,7 @@ specializing in CCTV, intercoms, access control, automatic gates, and electric f
 <h3>Installed with care.<br>Maintained on request.</h3>
 
 <p>
-We provide professional installation of security and access systems that keep your home,
-business, and people safe — and we are here to service them whenever you need us.
+We provide professional installation of security and access systems.
 </p>
 
 </div>
@@ -293,32 +380,37 @@ business, and people safe — and we are here to service them whenever you need 
 <div class="services">
 
 <div class="card">
+<img src="assets/services/service-cctv.png">
 <h3>CCTV & Surveillance</h3>
-<p>Professional installation of CCTV cameras for homes and businesses.</p>
+<p>Professional installation for homes and businesses.</p>
 <a class="service-link" href="#contact">Learn more</a>
 </div>
 
 <div class="card">
+<img src="assets/services/service-intercom.png">
 <h3>Video Intercom</h3>
-<p>See and speak with visitors from anywhere in your home.</p>
+<p>See and speak with visitors anytime.</p>
 <a class="service-link" href="#contact">Learn more</a>
 </div>
 
 <div class="card">
+<img src="assets/services/access-control.png">
 <h3>Access Control</h3>
-<p>Biometric and smart card systems for secure entry.</p>
+<p>Secure biometric entry systems.</p>
 <a class="service-link" href="#contact">Learn more</a>
 </div>
 
 <div class="card">
-<h3>Automatic Sliding Gates</h3>
-<p>Reliable gate automation systems for modern properties.</p>
+<img src="assets/services/service-gate.png">
+<h3>Automatic Gates</h3>
+<p>Reliable gate automation systems.</p>
 <a class="service-link" href="#contact">Learn more</a>
 </div>
 
 <div class="card">
+<img src="assets/services/service-fence.png">
 <h3>Electric Fencing</h3>
-<p>Strong perimeter protection systems for safety.</p>
+<p>Strong perimeter protection.</p>
 <a class="service-link" href="#contact">Learn more</a>
 </div>
 
@@ -331,24 +423,16 @@ business, and people safe — and we are here to service them whenever you need 
 
 <h2 class="section-title">Start a Conversation</h2>
 
-
 <div class="contact-grid">
 
 <div class="contact-left">
-<div class="hero-text">
 
-<h2 class="headline">Ready to secure your space?</h2>
+<h2>Ready to secure your space?</h2>
 
-<p class="subtext">
-Whether you need CCTV, video intercom, access control, automatic gates, or electric fencing — 
-we're here to install it right.
+<p>
+We install CCTV, intercoms, access control, gates, and electric fencing.
 </p>
 
-</div>
-
- <p><strong>Contact</strong></p>
-
-        <p>
 <p>
 📞 <a href="tel:+233242928606">+233 24 292 8606</a><br>
 📞 <a href="tel:+233543026065">+233 54 302 6065</a><br>
@@ -362,11 +446,9 @@ we're here to install it right.
 <p><strong>Follow Us</strong></p>
 
 <div class="social-icons">
-
 <a class="icon ig" href="https://instagram.com/noveraenergytech"><i class="fa-brands fa-instagram"></i></a>
 <a class="icon fb" href="https://facebook.com/novera.energy.and.technologies"><i class="fa-brands fa-facebook"></i></a>
 <a class="icon tt" href="https://tiktok.com/@novera093"><i class="fa-brands fa-tiktok"></i></a>
-
 </div>
 
 </div>
@@ -377,18 +459,18 @@ we're here to install it right.
 
 <form action="https://formspree.io/f/xxxxxx" method="POST">
 
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email">
-<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email">
+<input type="tel" placeholder="Phone Number" required>
 
-<select name="service">
+<select>
 <option>CCTV Installation</option>
 <option>Video Intercom</option>
 <option>Access Control</option>
 <option>Automation</option>
 </select>
 
-<textarea rows="5" name="message" placeholder="Project Details"></textarea>
+<textarea rows="5" placeholder="Project Details"></textarea>
 
 <button type="submit">Request Consultation</button>
 
