@@ -1,0 +1,286 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#1a1a1a;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+header{
+    background:#0b3d91; /* deep professional blue */
+    padding:18px 8%;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO (blended clean style) */
+.logo img{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* NAV */
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:22px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    opacity:0.8;
+}
+
+/* ================= HERO ================= */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.brand-name{
+    font-size:54px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.brand-tagline{
+    font-size:14px;
+    letter-spacing:4px;
+    opacity:0.85;
+    margin-top:6px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:#1e90ff; /* bright tech blue */
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:#1877f2;
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#0b3d91;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* ================= ABOUT ================= */
+.about-container{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* ================= SERVICES ================= */
+.services-intro{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+    margin-bottom:40px;
+}
+
+.services-intro h3{
+    color:#0b3d91;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+/* SERVICE CARD */
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    border-top:3px solid #1e90ff;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:40px;
+}
+
+/* LEFT SIDE */
+.contact-left{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.hero-text{
+    margin-bottom:20px;
+}
+
+.headline{
+    font-size:24px;
+    font-weight:700;
+    color:#0b3d91;
+    margin-bottom:10px;
+}
+
+.subtext{
+    font-size:15px;
+    color:#444;
+}
+
+/* CONTACT LINKS */
+.contact-left a{
+    color:#0b3d91;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    gap:12px;
+    margin-top:12px;
+}
+
+.icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:white;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.icon:hover{
+    transform:scale(1.1);
+}
+
+.ig{ background:#E1306C; }
+.fb{ background:#1877F2; }
+.tt{ background:#000; }
+
+/* RIGHT FORM */
+.contact-form{
+    background:white;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+.contact-form h3{
+    margin-bottom:15px;
+    color:#0b3d91;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.contact-form button{
+    width:100%;
+    padding:14px;
+    background:#1e90ff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.contact-form button:hover{
+    background:#1877f2;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#0b0b0b;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:40px;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:900px){
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .brand-name{
+        font-size:40px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+}
